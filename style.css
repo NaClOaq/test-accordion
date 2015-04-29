@@ -1,0 +1,33 @@
+dl{
+  width: 200px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+dt{
+  background: #ccc;
+}
+
+
+dd{
+
+}
+
+table{
+  border:solid 1px;
+}
+
+
+.hide{
+  display: none;
+}
+
+
+.accordionWrapper{
+}
+.accordionBtn{
+  cursor: pointer;
+}
+.accordionCont{
+  display: none;
+}

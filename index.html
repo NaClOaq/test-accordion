@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.1/build/cssreset/cssreset-min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <button>Toggle</button>
+  <p>Hello</p>
+  <p style="display: none">Good Bye</p>
+
+<input type="radio" name="radiobutton" value="ラジオボタン1">ラジオボタン1
+<input type="radio" name="radiobutton" value="ラジオボタン2">ラジオボタン2
+
+
+
+<dl class="accordionWrapper">
+  <dt class="accordionBtn">てすと1</dt>
+  <dd class="accordionCont">テキストテキストテキストテキストテキストテキスト</dd>
+</dl>
+<dl class="accordionWrapper">
+  <dt class="accordionBtn">てすと2</dt>
+  <dd class="accordionCont">テキストテキストテキストテキストテキストテキスト</dd>
+</dl>
+<dl class="accordionWrapper">
+  <dt class="accordionBtn">てすと3</dt>
+  <dd class="accordionCont">テキストテキストテキストテキストテキストテキスト</dd>
+</dl>
+
+
+<form id="form1">
+<table>
+<colgroup>
+  <col>
+  <col>
+</colgroup>
+<tbody>
+<tr>
+  <th>契約エリア</th>
+  <td id="erea">
+    <ul id="ereaList">
+      <li><label><input type="radio" name="erea" value="erea-1" checked="checked">エリア1</label></li>
+      <li><label><input type="radio" name="erea" value="erea-2">エリア2</label></li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th>plan</th>
+  <td id="plan">
+    <ul id="planList-1" class="hide">
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_1" class="boxRadio-plan-1">エリア1ぷらん0</label></li>
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_2" class="boxRadio-plan-1">エリア1ぷらん1</label></li>
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_3">エリア1ぷらん2</label></li>
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_4">エリア1ぷらん3</label></li>
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_5">エリア1ぷらん4</label></li>
+      <li><label><input type="checkbox" name="plan-1" value="plan-1_6">エリア1ぷらん5</label></li>
+    </ul>
+    <ul id="planList-2">
+      <li><label><input type="checkbox" name="plan-2" value="plan-2_1" class="boxRadio-plan-2">エリア2ぷらん0</label></li>
+      <li><label><input type="checkbox" name="plan-2" value="plan-2_2" class="boxRadio-plan-2">エリア2ぷらん1</label></li>
+      <li><label><input type="checkbox" name="plan-2" value="plan-2_3">エリア2ぷらん2</label></li>
+      <li><label><input type="checkbox" name="plan-2" value="plan-2_4">エリア2ぷらん3</label></li>
+      <li><label><input type="checkbox" name="plan-2" value="plan-2_5">エリア2ぷらん4</label></li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th>Option</th>
+  <td id="option">
+    <ul id="planList-1" class="hide">
+      <li><label><input type="checkbox" name="option-1" value="option-1_1">エリア1おぷしょん0</label></li>
+      <li><label><input type="checkbox" name="option-1" value="option-1_2">エリア1おぷしょん1</label></li>
+      <li><label><input type="checkbox" name="option-1" value="option-1_3">エリア1おぷしょん2</label></li>
+      <li><label><input type="checkbox" name="option-1" value="option-1_4">エリア1おぷしょん3</label></li>
+      <li><label><input type="checkbox" name="option-1" value="option-1_5">エリア1おぷしょん4</label></li>
+      <li><label><input type="checkbox" name="option-1" value="option-1_6">エリア1おぷしょん5</label></li>
+    </ul>
+    <ul id="optionList-2">
+      <li><label><input type="checkbox" name="option-2" value="option-2_1">エリア2おぷしょん0</label></li>
+      <li><label><input type="checkbox" name="option-2" value="option-2_2">エリア2おぷしょん1</label></li>
+      <li><label><input type="checkbox" name="option-2" value="option-2_3">エリア2おぷしょん2</label></li>
+      <li><label><input type="checkbox" name="option-2" value="option-2_4">エリア2おぷしょん3</label></li>
+      <li><label><input type="checkbox" name="option-2" value="option-2_5">エリア2おぷしょん4</label></li>
+    </ul>
+  </td>
+</tr>
+</tbody>
+</table>
+
+
+</form>
+
+
+
+<form action="./" method="post">
+<table class="tbl-04">
+<colgroup>
+<col class="w-35">
+<col class="w-65">
+</colgroup>
+<tbody>
+
+<tr>
+<th class="left"><label for="email1">メールアドレス</label> <strong class="required">必須</strong></th>
+<td>
+<input name="email" value="" id="email1" class="w-80" type="email">
+<ul class="list-notice">
+<li><span>※</span>半角英数字にてご入力ください。</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<th class="left">デベロッパーの方は開発ジャンルをご選択ください。</th>
+<td>
+<ul>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="0" />スマートフォン用アプリケーション</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="1" />PC用アプリケーション</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="2" />Webサービス・Webサイト</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="3" />ロボット用アプリケーション</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="4" />組み込みアプリケーション</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="5" />アニメーション・CG用アプリケーション</label></li>
+<li><label><input type="checkbox" name="c_dev_genre[]" value="6" />その他</label></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<th class="left">クリエーターの方は制作ジャンルをご選択ください。</th>
+<td>
+<ul>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="0" />グラフィック</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="1" />映像</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="2" />立体物</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="3" />インスタレーション・空間演出</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="4" />音楽</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="5" />Vocaloid</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="6" />3DCG（MMD含む）</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="7" />アプリケーション</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="8" />建築</label></li>
+<li><label><input type="checkbox" name="c_cr_genre[]" value="9" />その他</label></li>
+</ul>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="jquery-1.9.1.min.js"><¥/script>');</script>
+
+
+
+
+<script src="./main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
