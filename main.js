@@ -43,8 +43,6 @@ $(function(){
   });
 
 
-// OCN光 おまかせプラン(with フレッツ又は「フレッツ」)に加入中
-// OCN光 あんしんプラン「フレッツ」に加入中
     
   
     setInputAction(
