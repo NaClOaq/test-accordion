@@ -43,6 +43,47 @@ $(function(){
   });
 
 
+// OCN光 おまかせプラン(with フレッツ又は「フレッツ」)に加入中
+// OCN光 あんしんプラン「フレッツ」に加入中
+    
+  
+    setInputAction(
+      'plan-1',
+      'input[value="option-1_5"]',
+      function(){var condition = $('input[value="plan-1_4"]').prop('checked'); return condition;},
+      true
+    );
+
+
+function setInputAction(onInputName,targetInptVal,contractCondition,expandCondition){
+// onInputName  選択input名 
+// targetInptVal  ターゲットinput名
+// expandCondition  縮小条件[false,ture]
+// contractCondition  展開条件[false,ture]
+  $('input[name="'+onInputName+'"]').on('change', function() {
+    if(contractCondition()){
+      $(targetInptVal).closest('li').fadeOut('fast');
+      $(targetInptVal).prop('checked',false);
+    }else if(expandCondition) {
+      $(targetInptVal).closest('li').fadeIn('fast');
+    }
+});
+
+
+// $(onInputName).on('change', function() {
+//     if(contractCondition){
+//       $(targetInptVal).closest('li').fadeOut('fast');
+//       $(targetInptVal).prop('checked',false);
+//     }else if(expandCondition) {
+//       $(targetInptVal).closest('li').fadeIn('fast');
+//     }
+// });
+
+};
+
+
+
+
 // typeRadioCheckBox
   $('input[class^="boxRadio-"]').on('click', function() {
     $('.'+boxRadioClass($(this))).prop('checked',false);
